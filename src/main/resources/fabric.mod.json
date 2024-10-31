@@ -1,0 +1,32 @@
+{
+    "schemaVersion": 1,
+    "id": "fabric-world-override",
+    "version": "${version}",
+    "name": "fabric-world-override",
+    "description": "",
+    "authors": [],
+    "contact": {},
+    "license": "All-Rights-Reserved",
+    "icon": "assets/fabric-world-override/icon.png",
+    "environment": "*",
+    "entrypoints": {
+        "client": [
+            "io.hardel.fabricWorldOverride.client.FabricWorldOverrideClient"
+        ],
+        "main": [
+            "io.hardel.fabricWorldOverride.FabricWorldOverride"
+        ]
+    },
+    "mixins": [
+        "fabric-world-override.mixins.json",
+        {
+            "config": "fabric-world-override.client.mixins.json",
+            "environment": "client"
+        }
+    ],
+    "depends": {
+        "fabricloader": ">=${loader_version}",
+        "fabric": "*",
+        "minecraft": "${minecraft_version}"
+    }
+}
