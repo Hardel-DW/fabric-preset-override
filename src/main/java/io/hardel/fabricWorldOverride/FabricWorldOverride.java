@@ -31,10 +31,6 @@ public class FabricWorldOverride implements ModInitializer {
     public void onInitialize() {
         ServerWorldEvents.LOAD.register((server, world) -> {
             LOGGER.info("World loaded: " + world.getRegistryKey().getValue());
-            if (!world.getRegistryKey().equals(World.OVERWORLD)) {
-                LOGGER.info("Skipping non-overworld world");
-                return;
-            }
 
             ChunkGenerator generator = world.getChunkManager().getChunkGenerator();
             LOGGER.info("Chunk generator: " + generator.getClass().getName());

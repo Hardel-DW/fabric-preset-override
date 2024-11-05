@@ -17,7 +17,8 @@
 				"type": "minecraft:noise",
 				"settings": "minecraft:end",
 				"biome_source": {
-					"type": "minecraft:the_end"
+					"type": "minecraft:the_end",
+					"preset": "fabric-world-override:custom"
 				}
 			}
 		},
@@ -28,7 +29,7 @@
 				"settings": "minecraft:nether",
 				"biome_source": {
 					"type": "minecraft:multi_noise",
-					"preset": "minecraft:nether"
+					"preset": "fabric-world-override:custom"
 				}
 			}
 		}
